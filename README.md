@@ -99,14 +99,6 @@ The architecture illustrates both automated and manual log ingestion paths:
 6. Splunk’s HTTP Event Collector (HEC) ingests the data for indexing and visualization.
 7. For manual uploads, S3 triggers Lambda → Firehose → Splunk ingestion.
 
-**Simplified Data Flow:**
-
-AWS Services → CloudWatch → Lambda → Firehose → Route 53 → ALB (443) → EC2 (8080) → Splunk HEC -> Splunk Dashboard(s)
-↑
-(Manual Path)
-S3 → Lambda → Firehose
-
-
 ---
 
 ## Objectives
