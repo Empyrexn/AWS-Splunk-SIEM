@@ -113,7 +113,7 @@ The architecture illustrates both automated and manual log ingestion paths:
 
 ## Security Considerations
 
-- **Network Isolation (Working on Implementing):** ALB and EC2 are currently deployed in public subnets within a VPC. However, the goal is to soon restrict public access.
+- **Network Isolation (Working on Implementing):** ALB and EC2 are currently deployed in public subnets within a VPC. However, the goal is to soon restrict public access by putting the ALB and EC2 in private subnets.
 - **Access Control:** Security groups limit inbound traffic to approved IP ranges or AWS service sources.
 - **Encryption:** TLS (HTTPS) for all data in transit; S3 encryption for data at rest.
 - **Least Privilege IAM:** Lambda, Firehose, and CloudWatch roles follow least-privilege principles.
