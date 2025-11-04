@@ -36,7 +36,7 @@ curl -k https://<your-domain-or-alb>/services/collector/health
 4. **HTTP Endpoint (HEC) URL:**
 
    ```
-   https://<your Route53 domain or ALB DNS>:443/services/collector
+   https://<your Route53 domain or ALB DNS>:443
    ```
 
    * Use port **443** if TLS terminates at the ALB with ACM.
@@ -65,11 +65,11 @@ You can define this in **Splunk Web** or directly in configuration files.
 4. **Advanced Settings:**
 
    ```
+   [aws:waf:json]
    SHOULD_LINEMERGE = false
-   TRUNCATE = 50000
-   TIME_PREFIX = "timestamp":\s*
-   TIME_FORMAT = %s%3N
-   INDEXED_EXTRACTIONS = json
+   TIME_FORMAT = %s%Q
+   TIME_PREFIX = "timestamp":
+   KV_MODE = json
    ```
 5. Save the sourcetype.
 
@@ -106,7 +106,6 @@ The Splunk Add-on for AWS provides field extractions and data models for common 
 | ALB / ELB Access Logs | `aws:elb:accesslogs`         |
 | VPC Flow Logs         | `aws:cloudwatchlogs:vpcflow` |
 | CloudTrail Logs       | `aws:cloudtrail`             |
-| GuardDuty Findings    | `aws:guardduty:findings`     |
 
 These sourcetypes automatically enable field extractions and CIM compliance.
 
