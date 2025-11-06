@@ -9,6 +9,8 @@ This project demonstrates the design and deployment of a secure, scalable, and h
 The pipeline leverages **Amazon CloudWatch**, **Kinesis Data Firehose**, **AWS Lambda**, **Amazon S3**, and **AWS Certificate Manager (ACM)** to route logs securely over HTTPS to a **Splunk HTTP Event Collector (HEC)** endpoint hosted on an EC2 instance behind an **Application Load Balancer (ALB)**.  
 **Route 53** provides DNS resolution for a custom domain, ensuring secure HTTPS communication with TLS certificates managed by ACM.
 
+Compared to a previous Architecture I had done for California State University, Fresno, this archtiecture cut down costs by ~70%
+
 ---
 
 ## Architecture Diagram
