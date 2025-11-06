@@ -60,7 +60,7 @@ The architecture illustrates both automated and manual log ingestion paths:
 7. **Amazon EC2 (Splunk Enterprise)**
    - **Role:** Hosts Splunk Enterprise and the HTTP Event Collector (HEC) endpoint.
    - **Functionality:** Receives log data from Firehose through the ALB, indexes it, and populates dashboards for visualization and analytics.
-   - **Security:** Deployed in private subnets within the VPC; only accessible through the ALB.
+   - **Security:** Deployed in public subnets within the VPC (with plans to move to private subnets); only accessible through the ALB and only has SSH access from university IP.
 
 8. **AWS Route 53**
    - **Role:** Provides DNS resolution for a custom ingestion domain (e.g., `logs.example.com`).
