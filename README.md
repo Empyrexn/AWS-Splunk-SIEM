@@ -128,3 +128,6 @@ By integrating **Route 53**, **ACM**, **ALB**, **Lambda**, **S3**, **Firehose**,
 
 The solution is scalable, cost-efficient, and reflects production-grade SIEM design principles, ensuring data confidentiality, integrity, and availability across the ingestion pipeline.
 
+![image](https://github.com/user-attachments/assets/d79c11fe-051f-49ff-9d5f-4d95965261cf)
+![image](https://github.com/user-attachments/assets/1416502a-d1d7-4fea-99ac-320dfff95619)
+![image](https://github.com/user-attachments/assets/2742912d-fd27-424b-a317-69dfdea07215)
